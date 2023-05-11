@@ -4,9 +4,9 @@ export function MailPreview({ mail }) {
 
     const { subject, from } = mail
     return (
-        <article className="mail-preview">
-            <h2>{from}</h2>
-            <h4>{subject}</h4>
-        </article>
+        <section className="mail-preview flex space-between">
+            <div className="from" >{from}</div>
+            <div className="subject">{subject}</div>
+        </section>
     )
 }

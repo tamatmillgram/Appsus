@@ -4,9 +4,15 @@ const { Link } = ReactRouterDOM
 
 export function MailList({emails, onRemoveMail}) {
     return (
-        <ul className="mail-list">
+        <section>
+        <div className="mail-list-container main-layout"></div>
+        <div className="mail-list-rows-container main-layout"></div>
+        <div className="mail-list-rows-container">
+        <ul className="mail-list-rows-container ">
+            <li className="mail-list-header flex">
+                <h3>Inbox Messages</h3></li>
         {emails.map(mail =>
-            <li key={mail.id}>
+            <li className="mail flex space-between" key={mail.id}>
                 <MailPreview mail={mail} />
                 <section>
                     <button onClick={() => onRemoveMail(mail.id)} >Remove</button>
@@ -16,5 +22,7 @@ export function MailList({emails, onRemoveMail}) {
             </li>
         )}
     </ul>
+    </div>
+    </section>
     )
 }

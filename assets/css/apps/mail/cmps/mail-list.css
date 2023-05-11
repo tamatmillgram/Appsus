@@ -1,3 +1,7 @@
  /* mail list */
 
- 
+ .mail{
+    border: solid black 1px;
+    padding: 0.2em;
+    
+ }
