@@ -1,0 +1,17 @@
+.logo {
+    display: flex;
+    font-family: Roboto-medium;
+  }
+  
+  .appsus-logo{
+    font-size: 2rem;
+  }
+
+  .img-logo{
+    height: 2em;
+    width: 2em;
+    margin: 0;
+    padding: 0;
+  }
+
+  
