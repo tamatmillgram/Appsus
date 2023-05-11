@@ -18,9 +18,9 @@ export function AppHeader() {
             </div>
         </Link>
         <nav>
-        <form action="" onSubmit={onSearchMail}>
+        {/* <form action="" onSubmit={onSearchMail}>
                 <input onChange={handleChange} type="search" name="" id="" placeholder="Search mail"/>
-            </form>
+            </form> */}
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about">About</NavLink>
             <NavLink to="/mail">Mail</NavLink>

@@ -8,46 +8,48 @@ export const mailService = {
     get,
     remove,
     save,
-    getDefaultFilter
+    getDefaultFilter,
+    getPrevMailId,
+    getNextMailId
 }
 
 const gMails = [
     {
-        id: 'e101',
+        id: utilService.makeId(),
         subject: 'Miss you!',
         body: 'Would love to catch up sometimes',
         isRead: false,
-        sentAt: 1551133930594,
+        sentAt:formatDate(1551133930594),
         removedAt: null,
         from: 'momo@momo.com',
         to: 'user@appsus.com'
     },
     {
-        id: 'e102',
+        id: utilService.makeId(),
         subject: 'Tamar,add Shykeeya Simmons ',
         body: 'Do you know Shykeeya Simmons?',
         isRead: false,
-        sentAt: 1551133930594,
+        sentAt: formatDate(1551133930594),
         removedAt: null,
         from: 'LinkedIn',
         to: 'user@appsus.com'
     },
     {
-        id: 'e103',
+        id: utilService.makeId(),
         subject: 'Weekend Getaway',
         body: 'Escape the city and enjoy a relaxing weekend retreat',
         isRead: false,
-        sentAt: 1551133930594,
+        sentAt: formatDate(1551133930594),
         removedAt: null,
         from: 'Salina',
         to: 'user@appsus.com'
     },
     {
-        id: 'e104',
+        id: utilService.makeId(),
         subject: 'קבלת רכישה ב-Wolt',
         body: 'חשבונית מס / קבלה (מקור) מספר 131952635',
         isRead: false,
-        sentAt: 1551133930594,
+        sentAt: formatDate(1551133930594),
         removedAt: null,
         from: 'Wolt',
         to: 'user@appsus.com'
@@ -96,4 +98,29 @@ function _createEmails() {
 
         storageService.saveToStorage(MAIL_KEY, gMails)
     }
+}
+
+function formatDate(timestamp) {
+    const date = new Date(timestamp);
+    const options = { year: 'numeric', month: 'short', day: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+  }
+
+
+  function getNextMailId(mailId) {
+    return storageService.query(MAIL_KEY)
+        .then((emails) => {
+            let mailIdx = emails.findIndex(mail => mail.id === mailId)
+            if (mailIdx === emails.length - 1) mailIdx = -1
+            return emails[mailIdx + 1].id
+        })
+}
+
+function getPrevMailId(mailId) {
+    return storageService.query(MAIL_KEY)
+        .then((emails) => {
+            let mailIdx = emails.findIndex(mail => mail.id === mailId)
+            if (mailIdx === 0) mailIdx = emails.length - 1
+            return emails[mailIdx - 1].id
+        })
 }
