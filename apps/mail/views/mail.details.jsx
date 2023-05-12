@@ -46,19 +46,23 @@ export function MailDetails() {
 
     if (!mail) return <div>Loading...</div>
 
-    const {subject, body, sentAt,from, to } = mail
+    const { subject, body, sentAt, from, to } = mail
 
 
     return (
         <section className="mail-details">
-            <h1> {subject}</h1>
-            <h2> {from}</h2>
-            <button><i className="fa-regular fa-star"></i></button>
-            <div>{sentAt}</div>
-            <div>{body}</div>
-            <button><Link to={`/mail/${prevMailId}`}><i className="fa-regular fa-arrow-right"></i></Link></button>
-            <button><Link to={`/mail/${nextMailId}`}><i className="fa-regular fa-arrow-left"></i></Link></button>
-            <button onClick={onBack}>Back</button>
+            <button className="back-btn" onClick={onBack}><i className="fa-solid fa-angle-left"></i></button>
+            <div>
+                <div className="mail-details-header flex column" >
+                    <h1> {subject}</h1>
+                    <h1> {from}</h1>
+                    {/* <button><i className="fa-regular fa-star"></i></button> */}
+                    <div className="sent-at">{sentAt}</div>
+                </div>
+                <div className="content-body">{body}</div>
+            </div>
+            <button className="prev-btn"><Link to={`/mail/${prevMailId}`}><i className="fa-solid fa-arrow-left-long"></i></Link></button>
+            <button className="next-btn"><Link to={`/mail/${nextMailId}`}><i className="fa-solid fa-arrow-right-long"></i></Link></button>
         </section>
     )
 

@@ -1,0 +1,30 @@
+.pen-btn {
+    border: none;
+    border-radius: 0.2em;
+    height: 3em;
+    width: 3em;
+    background: #c2e7ff;
+    padding: 0;
+    margin: 1em;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  
+  .pen-btn:hover {
+  scale: 1.02;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .pen-btn i {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .mail-side-nav ul{
+    padding: 0;
+    margin: 1em;
+  }
+  
+  .mail-side-nav li{
+    padding: 0.5em;
+  }

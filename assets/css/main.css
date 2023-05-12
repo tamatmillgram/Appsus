@@ -15,11 +15,12 @@
 /* @import './apps/note/views/note-index.css'; */
 
 @import './apps/mail/views/mail-index.css';
+@import './apps/mail/views/mail-side-nav.css';
 
 /* Cmps */
 
 @import './cmps/user-msg.css';
 @import './cmps/app-header.css';
 @import './cmps/logo.css';
-
+@import './apps/mail/cmps/mail-details.css';
 @import './apps/mail/cmps/mail-list.css';
