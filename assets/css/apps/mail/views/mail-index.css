@@ -1,1 +1,12 @@
  /* mail index  */
+.mail-list-cpm{
+    flex:1;
+}
+
+.mail-compose{
+    position: relative;
+}
+
+.search-bar{
+   margin-inline-start: 11em;
+}

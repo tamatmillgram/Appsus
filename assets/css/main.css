@@ -12,10 +12,10 @@
 /* Views */
 @import './views/home.css';
 
-/* @import './apps/note/views/note-index.css'; */
 
 @import './apps/mail/views/mail-index.css';
 @import './apps/mail/views/mail-side-nav.css';
+@import './apps/mail/cmps/mail-compose.css';
 
 /* Cmps */
 
@@ -24,3 +24,5 @@
 @import './cmps/logo.css';
 @import './apps/mail/cmps/mail-details.css';
 @import './apps/mail/cmps/mail-list.css';
+@import './apps/mail/cmps/amil-filter.css';
+@import './apps/mail/cmps/mail-preview.css';

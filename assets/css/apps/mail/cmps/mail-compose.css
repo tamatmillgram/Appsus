@@ -1,0 +1,74 @@
+.new-mail-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 30em;
+    background-color: white;
+    z-index: 1;
+    overflow: hidden;
+    margin-inline-start: 2em;
+    border: 0.1em solid #e7e6e6;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  textarea{
+    height: 25em;
+    border: none;
+    margin-inline: 1em;
+    resize: none;
+  }
+  
+  textarea:focus{
+    outline: 0;
+  }
+
+  .new-mail-box label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .new-mail-box input {
+    border: none;
+    border-block-end: 0.1em solid #ccc;
+    margin-inline: 1em;
+    margin-block: 0.5em;
+  }
+
+  .new-mail-box input:focus{
+    outline: 0;
+  }
+  
+  .sand-btn {
+    background-color: #0b57d0;
+    color: white;
+    border-radius: 5em;
+    cursor: pointer;
+    width: 7em;
+    height: 2.5em;
+    position: relative;
+    right: 0;
+    margin-inline-start: 28.5em;
+  }
+
+  .new-mail-header{
+    font-family:Roboto-Regular;
+    background-color: #f2f6fc;
+    padding: 0.8em;
+  }
+
+  .close-btn {
+    font-family: Roboto-Regular;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: 1em;
+    position: absolute;
+    top: 0.8em;
+    right: 0.9em;
+  }
+
+  .close-btn .fa-solid{
+    margin: 0;
+  }

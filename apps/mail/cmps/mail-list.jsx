@@ -40,7 +40,7 @@ export function MailList({ emails, onRemoveMail }) {
       <div className="mail-list-rows-container">
         <ul className="mail-list-rows-container">
           <li className="mail-list-header flex">
-            <h3 className="inbox-header">Inbox</h3>
+            <h3 className="inbox-header"></h3>
           </li>
           {emailList.map((mail) => (
             <li className={`mail flex space-between ${isRead(mail)}`} key={mail.id}>

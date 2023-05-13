@@ -1,21 +1,20 @@
- mail list * {
+ .mail-list * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
  }
 
-
  .mail-list-rows-container {
    margin-inline: 1.5rem;
    padding: 0;
-   border-radius: 2em;
  }
 
  .mail {
-   border-block-end: solid #f1f3f4 1px;
+   border-block-end: solid #eaebec 1px;
    padding: 0.1em;
-   border-inline-start: solid #f1f3f4 1px;
-   border-inline-end: solid #f1f3f4 1px;
+   border-inline-start: solid #eaebec 1px;
+   border-inline-end: solid #eaebec 1px;
+   background-color: #ffffff;
  }
 
  .mail-list-header {
@@ -23,30 +22,19 @@
    display: flex;
    align-items: center;
    padding: 0 1rem;
-   background-color: #f1f3f4;
-   border-bottom: solid 1px #ddd;
+   background-color: #ffffff;
+   border-bottom: solid 1px #eaebec;
  }
-
- .inbox-header {
-   color: #202124;
-   font-family: Roboto-Regular;
-   font-weight: 500;
-   font-size: 1.2rem;
- }
-
- .mail-preview {
-   gap: 2rem;
-   align-items: center;
- }
-
 
  .mail-body {
    color: rgb(91, 91, 92);
  }
 
  .mail:hover {
-   background-color: rgb(240, 239, 239);
    scale: 1.01;
+   border: solid 0.1em #f2f6fc;
+   box-shadow: rgba(100, 121, 143, 0.12) 0px -1px 0px 0px inset
+   ;
  }
 
  .mail button {
@@ -63,20 +51,17 @@
    color: gray;
  }
 
- .date {
-   font-family: Roboto-Regular;
- }
 
  .date-button-container {
    gap: 0.5em;
 
  }
-
  .not-read{
-  font-weight: bold;
+  font-family: Roboto-bold;
  }
 
  .read{
-  background-color: rgb(234, 231, 231);
+  background-color:#f2f6fc;
   font-weight: 300;
+  font-family: Roboto-Regular;
  }

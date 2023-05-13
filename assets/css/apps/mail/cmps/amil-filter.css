@@ -1,0 +1,11 @@
+.mail-filter input{
+    border: none;
+    border-radius:1em;
+    background-color: #eaf1fb;
+    height: 3em;
+    width: 20em;
+}
+
+.mail-filter input::placeholder{
+    padding: 1em;
+}

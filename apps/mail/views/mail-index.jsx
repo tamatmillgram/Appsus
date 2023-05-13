@@ -5,10 +5,12 @@ import { MailList } from "../cmps/mail-list.jsx"
 import {mailService} from "../services/mail.service.js"
 import {showSuccessMsg} from "../../../services/event-bus.service.js"
 import {MailSideNav} from "../views/mail-side-nav.jsx"
-
+import {MailCompose} from "../../mail/cmps/mail-compose.jsx"
+import {MailFilter} from "../../mail/cmps/mail-filter.jsx"
 
 export function MailIndex() {
 
+    const [shouldOpen, setShouldOpen] = useState(false)
     const [emails, setEmails] = useState([])
     const [filterBy, setFilterBy] = useState(mailService.getDefaultFilter())
 
@@ -34,13 +36,13 @@ export function MailIndex() {
     }
 
     return (
-
+        <section>
+            <div className="search-bar"><MailFilter onSetFilter={onSetFilter} filterBy={filterBy} /></div>
         <section className="mail-index full flex">
-            {/* <MailFilter onSetFilter={onSetFilter} filterBy={filterBy} /> */}
-            {/* <button><Link to="/mail/mail-add">Add Book from Google</Link></button>
-            <button><Link to="/mail/edit">Add Book</Link></button> */}
-            < MailSideNav emails={emails}/>
-            <MailList emails={emails} onRemoveMail={onRemoveMail} />
+            <MailSideNav setShouldOpen = {setShouldOpen} emails={emails}/>
+            <div className="mail-list-cpm"><MailList emails={emails} onRemoveMail={onRemoveMail} /></div>
+        </section>
+            <div className="mail-compose">{shouldOpen ? <MailCompose/> : null}</div>
         </section>
     )
 }

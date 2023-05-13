@@ -1,21 +1,19 @@
 const { useEffect, useState } = React
 const { Link } = ReactRouterDOM
 
-export function MailSideNav() {
+import { MailFolderList } from "../cmps/mail-folder-list.jsx"
+
+
+
+export function MailSideNav({setShouldOpen}) {
 
     
 
     return (
 
         <section className="mail-side-nav">
-            <button className="pen-btn"><i className="fa-solid fa-pen"></i></button>
-
-            <ul className="clean-list flex column space-between">
-                <li>Inbox</li>
-                <li>Starred</li>
-                <li>Sent</li>
-                <li>Trash</li>
-            </ul>
+            <button className="pen-btn" onClick={() => setShouldOpen(true)} ><i className="fa-solid fa-pen"></i></button>
+           <MailFolderList/>
         </section>
     )
 }

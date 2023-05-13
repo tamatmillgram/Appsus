@@ -1,6 +1,6 @@
 .pen-btn {
     border: none;
-    border-radius: 0.2em;
+    border-radius: 0.5em;
     height: 3em;
     width: 3em;
     background: #c2e7ff;
@@ -23,8 +23,19 @@
   .mail-side-nav ul{
     padding: 0;
     margin: 1em;
+    font-family: Roboto-Regular;
   }
   
   .mail-side-nav li{
     padding: 0.5em;
+    display: flex;
+  }
+
+  .mail-side-nav li:hover{
+    background-color: #f6f8fc;
+    border-radius: 1em;
+  }
+
+.fa-star{
+    padding-inline-end: 0.7em;
   }

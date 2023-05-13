@@ -2,6 +2,8 @@ import { utilService } from '../../../services/util.service.js'
 import { storageService } from '../../../services/async-storage.service.js'
 
 const MAIL_KEY = 'mailDB'
+const options = { month: 'short', day: 'numeric', year: 'numeric' };
+
 
 export const mailService = {
     query,
@@ -10,7 +12,8 @@ export const mailService = {
     save,
     getDefaultFilter,
     getPrevMailId,
-    getNextMailId
+    getNextMailId,
+    getEmptyMail
 }
 
 const gMails = [
@@ -46,8 +49,8 @@ const gMails = [
     },
     {
         id: utilService.makeId(),
-        subject: 'קבלת רכישה ב-Wolt',
-        body: 'חשבונית מס / קבלה (מקור) מספר 131952635',
+        subject: 'Wolt',
+        body: ' 131952635',
         isRead: false,
         sentAt: formatDate(1551133930594),
         removedAt: null,
@@ -123,4 +126,18 @@ function getPrevMailId(mailId) {
             if (mailIdx === 0) mailIdx = emails.length - 1
             return emails[mailIdx - 1].id
         })
+}
+
+
+function getEmptyMail() {
+    return {
+        id:'',
+        subject: '',
+        body: '',
+        isRead: false,
+        sentAt: new Date().toLocaleString('en-US', options),
+        removedAt: null,
+        from: 'Tamar@gmail.com',
+        to: '',
+    }
 }
