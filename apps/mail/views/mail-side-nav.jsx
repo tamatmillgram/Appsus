@@ -5,7 +5,7 @@ import { MailFolderList } from "../cmps/mail-folder-list.jsx"
 
 
 
-export function MailSideNav({setShouldOpen}) {
+export function MailSideNav({setShouldOpen, onSetFilter, resetFilter}) {
 
     
 
@@ -13,7 +13,7 @@ export function MailSideNav({setShouldOpen}) {
 
         <section className="mail-side-nav">
             <button className="pen-btn" onClick={() => setShouldOpen(true)} ><i className="fa-solid fa-pen"></i></button>
-           <MailFolderList />
+           <MailFolderList resetFilter={resetFilter} onSetFilter={onSetFilter}/>
         </section>
     )
 }

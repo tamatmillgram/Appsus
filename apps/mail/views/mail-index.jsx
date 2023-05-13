@@ -32,6 +32,10 @@ export function MailIndex() {
         })
     }
 
+    function resetFilter(){
+        setFilterBy({})
+    }
+
     function onSetFilter(filterBy) {
         setFilterBy(prevFilterBy => ({ ...prevFilterBy, ...filterBy }))
     }
@@ -40,7 +44,7 @@ export function MailIndex() {
         <section>
             <div className="search-bar"><MailFilter onSetFilter={onSetFilter} filterBy={filterBy} /></div>
         <section className="mail-index full flex">
-            <MailSideNav setShouldOpen = {setShouldOpen} emails={emails}/>
+            <MailSideNav resetFilter={resetFilter} setShouldOpen = {setShouldOpen} onSetFilter={onSetFilter} emails={emails}/>
             <div className="mail-list-cpm"><MailList emails={emails} onRemoveMail={onRemoveMail} /></div>
         </section>
             <div className="mail-compose">{shouldOpen ? <MailCompose setShouldOpen={setShouldOpen}/> : null}</div>
