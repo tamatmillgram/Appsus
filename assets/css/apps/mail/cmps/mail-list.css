@@ -10,11 +10,14 @@
  }
 
  .mail {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
    border-block-end: solid #eaebec 1px;
    padding: 0.1em;
    border-inline-start: solid #eaebec 1px;
    border-inline-end: solid #eaebec 1px;
    background-color: #ffffff;
+   justify-content: flex-start;
  }
 
  .mail-list-header {
@@ -65,3 +68,12 @@
   font-weight: 300;
   font-family: Roboto-Regular;
  }
+
+.star{
+  margin: 1em;
+ }
+
+ .mail-preview {
+  gap: 2rem;
+  align-items: center;
+}

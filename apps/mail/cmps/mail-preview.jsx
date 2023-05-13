@@ -12,8 +12,7 @@ export function MailPreview({ mail }) {
         <Link key={mail.id} to={`/mail/${mail.id}`} onClick={() => {
             mail.isRead = true
             mailService.save(mail)}}>
-            <section className="mail-preview flex space-between">
-             <button><i className="fa-regular fa-star"></i></button>
+            <section className="mail-preview flex">
             <div className="from" >{from}</div>
             <div className="subject">{subject}</div>
             <LongTxt txt={body} length={40} />

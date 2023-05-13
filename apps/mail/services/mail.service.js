@@ -25,7 +25,8 @@ const gMails = [
         sentAt:formatDate(1551133930594),
         removedAt: null,
         from: 'momo@momo.com',
-        to: 'user@appsus.com'
+        to: 'user@appsus.com',
+        isStared: false
     },
     {
         id: utilService.makeId(),
@@ -35,7 +36,8 @@ const gMails = [
         sentAt: formatDate(1551133930594),
         removedAt: null,
         from: 'LinkedIn',
-        to: 'user@appsus.com'
+        to: 'user@appsus.com',
+        isStared: false
     },
     {
         id: utilService.makeId(),
@@ -45,7 +47,8 @@ const gMails = [
         sentAt: formatDate(1551133930594),
         removedAt: null,
         from: 'Salina',
-        to: 'user@appsus.com'
+        to: 'user@appsus.com',
+        isStared: false
     },
     {
         id: utilService.makeId(),
@@ -55,7 +58,8 @@ const gMails = [
         sentAt: formatDate(1551133930594),
         removedAt: null,
         from: 'Wolt',
-        to: 'user@appsus.com'
+        to: 'user@appsus.com',
+        isStared: false
     },
 ]
 _createEmails()
@@ -67,6 +71,9 @@ function query(filterBy = {}) {
             if (filterBy.subject) {
                 const regExp = new RegExp(filterBy.subject, 'i')
                 emails = emails.filter(mail => regExp.test(mail.subject))
+            }
+            if(filterBy.isStared){
+                emails = emails.filter(mail => mail.isStared)
             }
             return emails
         })
@@ -139,5 +146,6 @@ function getEmptyMail() {
         removedAt: null,
         from: 'Tamar@gmail.com',
         to: '',
+        isStared: false
     }
 }

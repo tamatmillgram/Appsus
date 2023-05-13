@@ -5,7 +5,7 @@ import { mailService } from "../services/mail.service.js"
 import { utilService } from "../../../services/util.service.js"
 import { showSuccessMsg}  from "../../../services/event-bus.service.js"
 
-export function MailCompose() {
+export function MailCompose({setShouldOpen}) {
     const navigate = useNavigate()
     const [composeMail, setComposeMail] = useState(mailService.getEmptyMail())
     const params = useParams()
@@ -33,13 +33,14 @@ export function MailCompose() {
         ev.preventDefault()
         mailService.save(composeMail)
             .then(() => {
+                setShouldOpen(false)
                 navigate('/mail')
                 showSuccessMsg('Mail sent')
             })
     }
 
     function close(){
-
+        setShouldOpen(false)
     }
 
     const { body, subject, to } = composeMail

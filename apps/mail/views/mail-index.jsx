@@ -8,6 +8,7 @@ import {MailSideNav} from "../views/mail-side-nav.jsx"
 import {MailCompose} from "../../mail/cmps/mail-compose.jsx"
 import {MailFilter} from "../../mail/cmps/mail-filter.jsx"
 
+
 export function MailIndex() {
 
     const [shouldOpen, setShouldOpen] = useState(false)
@@ -42,7 +43,7 @@ export function MailIndex() {
             <MailSideNav setShouldOpen = {setShouldOpen} emails={emails}/>
             <div className="mail-list-cpm"><MailList emails={emails} onRemoveMail={onRemoveMail} /></div>
         </section>
-            <div className="mail-compose">{shouldOpen ? <MailCompose/> : null}</div>
+            <div className="mail-compose">{shouldOpen ? <MailCompose setShouldOpen={setShouldOpen}/> : null}</div>
         </section>
     )
 }
