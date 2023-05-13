@@ -9,6 +9,7 @@
    padding: 0;
  }
 
+
  .mail {
   display: grid;
   grid-template-columns: max-content 1fr max-content;
@@ -73,7 +74,3 @@
   margin: 1em;
  }
 
- .mail-preview {
-  gap: 2rem;
-  align-items: center;
-}

@@ -51,14 +51,12 @@ export function MailDetails() {
 
     return (
         <section className="mail-details">
-            <button className="back-btn" onClick={onBack}><i className="fa-solid fa-angle-left"></i></button>
-            <div>
+            <button className="back-btn" onClick={onBack}><i className="fa-solid fa-angle-left"></i>Back</button>
                 <div className="mail-details-header flex column" >
-                    <h1> {subject}</h1>
-                    <h1> {from}</h1>
+                    <h1 className="subject"> {subject}</h1>
+                    <h1 className="from"> {from}</h1>
                     {/* <button><i className="fa-regular fa-star"></i></button> */}
                     <div className="sent-at">{sentAt}</div>
-                </div>
                 <div className="content-body">{body}</div>
             </div>
             <button className="prev-btn"><Link to={`/mail/${prevMailId}`}><i className="fa-solid fa-arrow-left-long"></i></Link></button>

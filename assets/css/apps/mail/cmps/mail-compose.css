@@ -50,6 +50,10 @@
     margin-inline-start: 28.5em;
   }
 
+  .sand-btn .fa-paper-plane{
+    padding-inline-start: 0.3em;
+  }
+
   .new-mail-header{
     font-family:Roboto-Regular;
     background-color: #f2f6fc;

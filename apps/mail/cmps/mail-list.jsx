@@ -53,9 +53,6 @@ export function MailList({ emails, onRemoveMail }) {
 
   return (
     <section>
-      <div className="mail-list-container main-layout"></div>
-      <div className="mail-list-rows-container main-layout"></div>
-      <div className="mail-list-rows-container">
         <ul className="mail-list-rows-container">
           <li className="mail-list-header flex">
             <h3 className="inbox-header"></h3>
@@ -76,7 +73,6 @@ export function MailList({ emails, onRemoveMail }) {
             </li>
           ))}
         </ul>
-      </div>
     </section>
   )
 }

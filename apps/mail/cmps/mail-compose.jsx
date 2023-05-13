@@ -60,7 +60,7 @@ export function MailCompose({setShouldOpen}) {
                 <textarea className="body-txt" onChange={handleChange} 
                 value={body} type="text" name="body" id="body"></textarea>
 
-                <button className="sand-btn">Send</button>
+                <button className="sand-btn">Send<i className="fa-regular fa-paper-plane"></i></button>
             </form>
         </section>
     )

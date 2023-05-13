@@ -1,39 +1,52 @@
-.mail-details{
-margin-inline: 4rem;
+.mail-details {
+    margin-inline: 4rem;
 }
 
 .mail-details-header {
-    background-color: #282828;
-    color: #f0eeee;
+    background-color: #ffff;
+    color: #121111;
     padding: 0.5rem;
     line-height: 1.8;
     font-family: Roboto-Regular;
     margin: 0;
-    border: 0.1em solid #282828;
+    border: 0.1em solid #ffff;
+    border-radius: 1em;
 }
 
-.content-body{
-   padding: 0.2em;
-    border: 0.1em solid #282828;
+.content-body {
+    padding: 0.2em;
+    border: 0.1em solid #ffff;
+    background-color: #ffff;
+    font-family: Roboto-Regular;
 }
 
-.mail-details button{
+.mail-details button {
     border: none;
     background: none;
     padding: 0;
-    margin-block-start: 2em;
+    margin-block-start: 1em;
     cursor: pointer;
 }
 
-.back-btn{
-    font-size: 1.2rem;
+.back-btn {
+    font-size: 1rem;
+    margin-block-end: 0.3em;
+
 }
 
-.fa-solid{
+.fa-solid {
     font-size: 1.2rem;
-    margin-inline-end: 1rem;
+    margin-inline-end: 0.5rem;
 }
 
-.sent-at{
+.sent-at {
     font-size: 0.7rem;
+}
+
+.from{
+    font-size: 0.9rem;
+}
+
+.subject{
+    font-family: Roboto-bold;
 }

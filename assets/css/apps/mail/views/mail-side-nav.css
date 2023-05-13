@@ -29,6 +29,7 @@
   .mail-side-nav li{
     padding: 0.5em;
     display: flex;
+    cursor: pointer;
   }
 
   .mail-side-nav li:hover{

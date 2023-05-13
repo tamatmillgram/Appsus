@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    background-color: #f6f8fc;
+}
+
+.about-header {
+    text-align: center;
+    font-family: Roboto-bold;
+    font-size: 4em;
+}
+
+.about-p {
+    font-family: Roboto-regular;
+    background-color: rgb(244, 242, 242);
+    margin-inline-start: 20em;
+    margin-block-start: 3em;
+    padding: 1em;
+    border-radius: 1em;
+    width: 40em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.about-img {
+    height: 30em;
+    width: 30em;
+    border-radius: 1em;
+    margin-inline-start: 45em;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
